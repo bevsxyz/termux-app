@@ -1,7 +1,7 @@
 package com.termux.shared.interact;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
@@ -51,7 +51,7 @@ public class MessageDialogUtils {
                                    final DialogInterface.OnClickListener onNegativeButton,
                                    final DialogInterface.OnDismissListener onDismiss) {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.Theme_AppCompat_Light_Dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
         LayoutInflater inflater = (LayoutInflater) context.getSystemService( Context.LAYOUT_INFLATER_SERVICE );
         View view = inflater.inflate(R.layout.dialog_show_message, null);

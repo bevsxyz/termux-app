@@ -13,6 +13,7 @@ ext {
 }
 
 android {
+    namespace = "com.termux"
     compileSdkVersion project.properties.compileSdkVersion.toInteger()
     ndkVersion = System.getenv("JITPACK_NDK_VERSION") ?: project.properties.ndkVersion
     def appVersionName = System.getenv("TERMUX_APP_VERSION_NAME") ?: ""
@@ -82,6 +83,10 @@ android {
             storePassword 'xrj45yWGLbsO7W0v'
             keyPassword 'xrj45yWGLbsO7W0v'
         }
+    }
+
+    buildFeatures{
+        buildConfig true
     }
 
     buildTypes {
