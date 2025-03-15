@@ -115,9 +115,6 @@ android {
         }
     }
 
-    lintOptions {
-        disable 'ProtectedPermissions'
-    }
 
     testOptions {
         unitTests {
@@ -129,6 +126,9 @@ android {
         jniLibs {
             useLegacyPackaging true
         }
+    }
+    lint {
+        disable 'ProtectedPermissions'
     }
 
     applicationVariants.all { variant ->
